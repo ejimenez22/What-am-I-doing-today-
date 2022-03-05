@@ -8,9 +8,26 @@ var date = moment().format("MMMM Do YYYY, HH:mm");
 
 $("#currentDay").text(date);
 
+function coloredTime() {
+
 var currentHour = moment().hours();
 console.log("hour is: ",currentHour);
 
-if (currentHour.isAfter(time1)) {
-    
+$(".timeblock").each(function () {
+    var times = parseInt.each($(this).attr("id"));
+
+        if (times < currentHour) {
+            $(this).addClass("past")
+        } else if (times === currentHour) {
+            $(this).addClass("present"); 
+            $(this).removeClass("past");
+        } else {
+            $(this).addClass("future")
+            $(this).removeClass("present")
+            $(this).removeClass("past")
+        }
+    })
+
 }
+
+coloredTime();
