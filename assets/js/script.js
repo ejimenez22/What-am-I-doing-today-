@@ -10,3 +10,7 @@ $("#currentDay").text(date);
 
 var currentHour = moment().hours();
 console.log("hour is: ",currentHour);
+
+if (currentHour.isAfter(time1)) {
+    
+}
