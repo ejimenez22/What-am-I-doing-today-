@@ -4,6 +4,8 @@
 // appointments saved in localStorage
 // saved events DO NOT disappear on reset
 
+
+
 var date = moment().format("MMMM Do YYYY, HH:mm");
 
 $("#currentDay").text(date);
@@ -44,3 +46,13 @@ $(".saveBtn").on("click", function (event) {
 
     localStorage.setItem(text, appointments);
 })
+
+$("#0900").val(localStorage.getItem("0900"));
+$("#1000").val(localStorage.getItem("1000"));
+$("#1100").val(localStorage.getItem("1100"));
+$("#1200").val(localStorage.getItem("1200"));
+$("#1300").val(localStorage.getItem("1300"));
+$("#1400").val(localStorage.getItem("1400"));
+$("#1500").val(localStorage.getItem("1500"));
+$("#1600").val(localStorage.getItem("1600"));
+$("#1700").val(localStorage.getItem("1700"));
