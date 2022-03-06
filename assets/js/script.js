@@ -33,6 +33,14 @@ $(".timeblock").each(function () {
 timeStamp();
 
 
-$(".saveBtn").on("click", function () {
-    console.log(".saveBtn");
+$(".saveBtn").on("click", function (event) {
+    var textarea = $(this).prev();
+
+    var text = textarea.attr("id");
+
+    var appointments = textarea.val();
+
+    event.preventDefault();
+
+    localStorage.setItem(text, appointments);
 })
