@@ -8,13 +8,13 @@ var date = moment().format("MMMM Do YYYY, HH:mm");
 
 $("#currentDay").text(date);
 
-function coloredTime() {
+function timeStamp() {
 
 var currentHour = moment().hours();
 console.log("hour is: ",currentHour);
 
 $(".timeblock").each(function () {
-    var times = parseInt.each($(this).attr("id"));
+    var times = parseInt($(this).attr("id"));
 
         if (times < currentHour) {
             $(this).addClass("past")
@@ -30,4 +30,4 @@ $(".timeblock").each(function () {
 
 }
 
-coloredTime();
+timeStamp();
