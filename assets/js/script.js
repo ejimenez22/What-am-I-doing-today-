@@ -31,3 +31,8 @@ $(".timeblock").each(function () {
 }
 
 timeStamp();
+
+
+$(".saveBtn").on("click", function () {
+    console.log(".saveBtn");
+})
